@@ -2,11 +2,20 @@
   "name": "MasterChef",
   "version": "0.0.1",
   "private": true,
+  "rnpm": {
+    "assets": [
+      "./assets/fonts/"
+    ]
+  },
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
+    "android": "node node_modules/react-native/local-cli/cli.js run-android",
     "test": "jest"
   },
   "dependencies": {
+    "@gl/assets": "./assets",
+    "@gl/screen": "./src/screen",
+    "@gl/style": "./src/style",
     "react": "16.8.3",
     "react-native": "0.59.8",
     "react-native-extended-stylesheet": "^0.11.2",
