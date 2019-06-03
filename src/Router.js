@@ -1,17 +1,13 @@
-import { createStackNavigator, createAppContainer } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation';
+import { Easing, Animated, Platform } from 'react-native';
 
-import HomeScreen from "@gl/screen/Home";
-import CookingScreen from '@gl/screen/Cooking';
-import SearchScreen from '@gl/screen/Search';
-import ProfileScreen from '@gl/screen/Profile';
-
+import SettingScreen from '@gl/screen/Setting';
+import MainScreen from '@gl/screen/Main';
 
 export default createStackNavigator({
-    HomeScreen,
-    CookingScreen,
-    SearchScreen,
-    ProfileScreen
+    MainScreen,
+    SettingScreen,
 }, {
         headerMode: 'none',
-        initialRouteName: 'HomeScreen',
+        initialRouteName: 'MainScreen',
     });

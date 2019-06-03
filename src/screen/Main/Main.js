@@ -8,7 +8,8 @@ import SearchScreen from '@gl/screen/Search';
 import ProfileScreen from '@gl/screen/Profile';
 
 
-const Tab = createBottomTabNavigator({
+
+export default Tab = createBottomTabNavigator({
     HomeScreen: {
         screen: HomeScreen
     },
@@ -26,4 +27,4 @@ const Tab = createBottomTabNavigator({
         tabBarPosition: 'bottom'
     });
 
-export default createAppContainer(Tab);
+// export default createAppContainer(Tab);

@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import {
+    View,
+    Text
+} from 'react-native';
+import { connect } from 'react-redux'
+import { global_NAVIGATE_TO_ROUTE } from '@gl/store/global/action';
 import styles from './Search.style';
 
-export default class Search extends Component {
+class Search extends Component {
     state = {}
     render() {
         return (
@@ -12,3 +17,14 @@ export default class Search extends Component {
         );
     }
 }
+
+
+const mapStateToProps = state => ({
+
+});
+
+const mapDispatchToProps = dispatch => ({
+    _navigate: (route, params = {}, options = {}) => dispatch(global_NAVIGATE_TO_ROUTE(route, params, options))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Search);
